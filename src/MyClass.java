@@ -3,6 +3,7 @@ public class MyClass extends Thread{
     public MyClass( String name ){
 
         super(name) ;
+        start();
 
     }
 
@@ -13,12 +14,12 @@ public class MyClass extends Thread{
             System.out.println( i + "::" + this.getName() );
             try {
 
-                Thread.sleep(5000);
+                Thread.sleep(500);
 
             } catch (InterruptedException e) {
 
                 throw new RuntimeException(e);
-                
+
             }
 
         }
